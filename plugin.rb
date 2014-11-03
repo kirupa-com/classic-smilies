@@ -1,4 +1,4 @@
-# name: kF-classic-smilies
+# name: emoji
 # about: emoji support for Discourse, plus smilies from the old kirupaForum
 # version: 0.1
 # authors: Sam Saffron, Robin Ward, Kyle Murray (kF modifications only)

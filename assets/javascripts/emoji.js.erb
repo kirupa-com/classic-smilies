@@ -1,10 +1,9 @@
 (function() {
-  var emoji = <%= Dir.glob(File.expand_path("../../../public/images/*.png", __FILE__)).map{|f| File.basename(f).split(".")[0]}.inspect %>;
   var emoji = <%= Dir.glob(File.expand_path("../../../public/images/*.gif", __FILE__)).map{|f| File.basename(f).split(".")[0]}.inspect %>;
 
   function imageFor(code) {
     if (emoji.indexOf(code) !== -1) {
-      var url = Discourse.getURL('/plugins/classic-smilies/images/' + code + '.png');
+      var url = Discourse.getURL('/plugins/emoji/images/' + code + '.gif');
       return ['img', {href: url, title: ':' + code + ':', 'class': 'emoji', alt: code}];
     }
   }
@@ -116,7 +115,7 @@
                                           "{{#each options}}" +
                                               "<li>" +
                                                 "<a href='#'>" +
-                                                "<img src='" + baseUrl + "plugins/classic-smilies/images/{{this}}.png?v=1' class='emoji'> " +
+                                                "<img src='" + baseUrl + "plugins/emoji/images/{{this}}.gif?v=1' class='emoji'> " +
                                                 "{{this}}</a>" +
                                               "</li>" +
                                           "{{/each}}" +
